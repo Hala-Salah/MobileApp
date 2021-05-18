@@ -6,6 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HAMotorcycle.h"
+#import "HACar.h"
+#import "HATruck.h"
+#import "HAEngine.h"
+#import "HAAddAutoMobileViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
