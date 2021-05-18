@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HAFuelType.h"
+#import "HAFuelType.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

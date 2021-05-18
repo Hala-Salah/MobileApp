@@ -10,7 +10,7 @@
 #import "HACar.h"
 #import "HATruck.h"
 #import "HAEngine.h"
-#import "HAAddAutoMobileViewController.h"
+#import "HAAutoMobileDetailsViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

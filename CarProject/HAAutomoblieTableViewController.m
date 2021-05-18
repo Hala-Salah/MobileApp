@@ -121,15 +121,17 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
+    HAAutoMobileDetailsViewController *detailsPage = [segue destinationViewController]; 
     // Pass the selected object to the new view controller.
+    NSIndexPath *selectedAutomobile = [self.tableView indexPathForSelectedRow];
+    [detailsPage setCurrentAutomobile:[AutoMobile objectAtIndex:selectedAutomobile.row]];
 }
-*/
 
 
 @end

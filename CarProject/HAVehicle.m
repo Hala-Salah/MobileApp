@@ -6,7 +6,6 @@
 //
 
 #import "HAVehicle.h"
-#import "HAAutomobile.h"
 
 @implementation HAVehicle
 
