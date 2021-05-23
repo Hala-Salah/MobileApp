@@ -18,7 +18,7 @@
     NSString *palteNumberString;
     NSString *dataOneString;
     NSString *dataTwoString;
-
+    bool isfurnitreleather;
     
 }
     
@@ -34,18 +34,24 @@
     
     if ([_automobileTypeSelected isEqual:@"Car"]){
         _data1Label.text = [NSString stringWithFormat:@"Chairnum"];
-        _data2Label.text = [NSString stringWithFormat:@"Is Furnitre Leather"];
+        _data2Label.text = [NSString stringWithFormat:@"Furnitre Leather"];
+        _dataTwoTextField.hidden = YES;
+        _yesNoSwitch.hidden = NO;
     }
     
     if ([_automobileTypeSelected isEqual:@"Truck"]){
         _data1Label.text = [NSString stringWithFormat:@"Free Wight"];
         _data2Label.text = [NSString stringWithFormat:@"Full Wight"];
+        _yesNoSwitch.hidden = YES;
+
     }
     
     if ([_automobileTypeSelected isEqual:@"MotorCycle"]){
 
         _data1Label.text = [NSString stringWithFormat:@"Tierdianmeter"];
         _data2Label.text = [NSString stringWithFormat:@"Length"];
+        _yesNoSwitch.hidden = YES;
+
         
     }
     companyString = [[NSUserDefaults standardUserDefaults] stringForKey:@"string"];
@@ -69,6 +75,9 @@
     dataTwoString = [[NSUserDefaults standardUserDefaults] stringForKey:@"string"];
     [_dataTwoTextField setText:dataTwoString];
     
+  
+   
+
 }
 
 
@@ -97,7 +106,9 @@
     
     dataTwoString = [_dataTwoTextField text];
     [[NSUserDefaults standardUserDefaults] setObject : dataTwoString forKey:@"string"];
-   
+    if(self.yesNoSwitch.isOn){
+        isfurnitreleather = YES;
+    }else isfurnitreleather =NO;
     
     
     if ([_automobileTypeSelected isEqual:@"Car"]){
@@ -105,7 +116,7 @@
         chairnumInt = chairnumInt + [dataOneString integerValue];
          NSLog(@" %ld",(long)chairnumInt);
         
-        newAutomobile = [[HACar alloc]initWithchairnum:chairnumInt isfurnitreleather:YES length:99 width:88 color:[UIColor blueColor] manufactureCompany:companyString manufacture:[NSDate new] model:modelString plateNumber:palteNumberString bodySerialNumber:bodyNumberString engine:[HAEngine new] gearType:Normal];
+        newAutomobile = [[HACar alloc]initWithchairnum:chairnumInt isfurnitreleather:isfurnitreleather length:99 width:88 color:[UIColor blueColor] manufactureCompany:companyString manufacture:[NSDate new] model:modelString plateNumber:palteNumberString bodySerialNumber:bodyNumberString engine:[HAEngine new] gearType:Normal];
         automobileType=@"Car";
         
         
@@ -145,6 +156,7 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
     // Get the new view controller using [segue destinationViewController].
     HAAutomoblieTableViewController *theNewAutomobile = [segue destinationViewController];
     // Pass the selected object to the new view controller.
