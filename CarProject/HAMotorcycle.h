@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HAMotorcycle : HAAutomobile
 @property (assign ,nonatomic) double tierdianmeter;
-@property (assign ,nonatomic) double length;
+@property (assign ,nonatomic) double lengthh;
 
-- (instancetype) initWithtierdianmeter :(double)tierdianmeter length:(double)length manufactureCompany: (NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSString *)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType;;
+- (instancetype) initWithtierdianmeter :(double)tierdianmeter length:(double)lengthh manufactureCompany: (NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSString *)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType;;
 @end
 
 NS_ASSUME_NONNULL_END

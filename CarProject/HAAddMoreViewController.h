@@ -23,7 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *modelTextField;
 @property (weak, nonatomic) IBOutlet UITextField *bodyNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *plateNumberTextField;
+@property (weak, nonatomic) IBOutlet UILabel *data1Label;
+@property (weak, nonatomic) IBOutlet UILabel *data2Label;
+@property (weak, nonatomic) IBOutlet UITextField *dataOneTextField;
 
+@property (weak, nonatomic) IBOutlet UITextField *dataTwoTextField;
 
 @end
 

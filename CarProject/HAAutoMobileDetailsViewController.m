@@ -44,7 +44,7 @@
         
         _detailOneLabel.text=[NSString stringWithFormat:@"Tierdian Meter : %f " , (double)[_currentAutomobile tierdianmeter]];
         
-        _detailTwoLabel.text=[NSString stringWithFormat:@"Length : %f " , (double)[_currentAutomobile length]];
+        _detailTwoLabel.text=[NSString stringWithFormat:@"Length : %f " , (double)[_currentAutomobile lengthh]];
         }
     
     //now we wont to print other details 1_ Company

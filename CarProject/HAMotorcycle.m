@@ -11,13 +11,13 @@
 
 
 //initializer for child method
-- (instancetype) initWithtierdianmeter :(double)tierdianmeter length:(double)length manufactureCompany: (NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSString *)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType;{
+- (instancetype) initWithtierdianmeter :(double)tierdianmeter length:(double)lengthh manufactureCompany: (NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSString *)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType;{
     
     self=[super initWithManufactureCompany:manufactureCompany manufacture:manufacture model:model plateNumber:plateNumber bodySerialNumber:bodySerialNumber engine:engine gearType:gearType];
     
     if(self){
         self.tierdianmeter=tierdianmeter;
-        self.length=length;
+        self.lengthh=lengthh;
     }return self;
 }
 
