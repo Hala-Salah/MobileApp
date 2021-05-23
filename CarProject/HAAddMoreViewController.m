@@ -15,7 +15,7 @@
     NSString *companyString;
     NSString *modelString;
     NSString *bodyNumberString;
-    NSString *stringValue;
+    NSString *palteNumberString;
 }
     
 @end
@@ -25,8 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
     
     _automobileTypeLabel.text = [NSString stringWithFormat:@"%@" , _automobileTypeSelected];
     
@@ -38,6 +36,10 @@
         
         bodyNumberString = [[NSUserDefaults standardUserDefaults] stringForKey:@"string"];
         [_bodyNumberTextField setText:bodyNumberString];
+    
+    
+    palteNumberString = [[NSUserDefaults standardUserDefaults] stringForKey:@"string"];
+    [_plateNumberTextField setText:palteNumberString];
     
 }
 
@@ -59,22 +61,27 @@
         [[NSUserDefaults standardUserDefaults] setObject:bodyNumberString forKey:@"string"];
     
     
+    palteNumberString = [_plateNumberTextField text];
+    [[NSUserDefaults standardUserDefaults] setObject: palteNumberString forKey:@"string"];
+   
+    
+    
     if ([_automobileTypeSelected isEqual:@"Car"]){
         
-        newAutomobile = [[HACar alloc]initWithchairnum:909 isfurnitreleather:YES length:99 width:88 color:[UIColor blueColor] manufactureCompany:companyString manufacture:[NSDate new] model:modelString plateNumber:00 bodySerialNumber:bodyNumberString engine:[HAEngine new] gearType:Normal];
+        newAutomobile = [[HACar alloc]initWithchairnum:909 isfurnitreleather:YES length:99 width:88 color:[UIColor blueColor] manufactureCompany:companyString manufacture:[NSDate new] model:modelString plateNumber:palteNumberString bodySerialNumber:bodyNumberString engine:[HAEngine new] gearType:Normal];
         automobileType=@"Car";
         
         
     }
     if ([_automobileTypeSelected isEqual:@"Truck"]){
         
-        newAutomobile = [[HATruck alloc] initWithFreeWight:99.9 fullWight:88.3 length:100 width:200 color:[UIColor purpleColor] manufactureCompany:companyString manufacture:[NSDate new] model:modelString plateNumber:99 bodySerialNumber:bodyNumberString engine:[HAEngine new] gearType:Normal];
+        newAutomobile = [[HATruck alloc] initWithFreeWight:99.9 fullWight:88.3 length:100 width:200 color:[UIColor purpleColor] manufactureCompany:companyString manufacture:[NSDate new] model:modelString plateNumber:palteNumberString bodySerialNumber:bodyNumberString engine:[HAEngine new] gearType:Normal];
         
         automobileType=@"truck";
     }
     
     if ([_automobileTypeSelected isEqual:@"MotorCycle"]){
-        newAutomobile = [[HAMotorcycle alloc] initWithManufactureCompany:companyString manufacture:[NSDate new] model:modelString plateNumber:00 bodySerialNumber:bodyNumberString engine:[HAEngine new] gearType:Normal];
+        newAutomobile = [[HAMotorcycle alloc] initWithManufactureCompany:companyString manufacture:[NSDate new] model:modelString plateNumber:palteNumberString bodySerialNumber:bodyNumberString engine:[HAEngine new] gearType:Normal];
         automobileType=@"motorcycle";
     }
 }

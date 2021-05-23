@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign ,nonatomic) NSInteger chairnum;
 @property (nonatomic, assign)BOOL isfurnitreleather;
 
-- (instancetype)initWithchairnum:(NSInteger)chairnum isfurnitreleather: (BOOL)isfurnitreleather length:(NSInteger)length width:(NSInteger )width color:(UIColor *)color manufactureCompany: (NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSInteger)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType;
+- (instancetype)initWithchairnum:(NSInteger)chairnum isfurnitreleather: (BOOL)isfurnitreleather length:(NSInteger)length width:(NSInteger )width color:(UIColor *)color manufactureCompany: (NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSString *)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType;
 ;
 
 @end

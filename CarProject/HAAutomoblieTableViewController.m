@@ -24,16 +24,16 @@
     }
     
     //the first cell is Motorcycle
-     HAMotorcycle *motorCycle = [[HAMotorcycle alloc] initWithManufactureCompany:@"Harley-Davidson" manufacture:[NSDate new] model:@"2020" plateNumber:9874 bodySerialNumber:@"M89C8" engine:[HAEngine new] gearType:Normal];
+     HAMotorcycle *motorCycle = [[HAMotorcycle alloc] initWithManufactureCompany:@"Harley-Davidson" manufacture:[NSDate new] model:@"2020" plateNumber:@"SA98" bodySerialNumber:@"M89C8" engine:[HAEngine new] gearType:Normal];
     
     [AutoMobile addObject:motorCycle];
     
     //the second cell is Car
-    HACar *car = [[HACar alloc] initWithchairnum:510 isfurnitreleather:YES length:898 width:1000 color:[UIColor blackColor] manufactureCompany:@"BMW" manufacture:[NSDate new] model:@"2019" plateNumber:124 bodySerialNumber:@"SA980" engine:[HAEngine new] gearType:Automatic];
+    HACar *car = [[HACar alloc] initWithchairnum:510 isfurnitreleather:YES length:898 width:1000 color:[UIColor blackColor] manufactureCompany:@"BMW" manufacture:[NSDate new] model:@"2019" plateNumber:@"LO8" bodySerialNumber:@"SA980" engine:[HAEngine new] gearType:Automatic];
     [AutoMobile addObject:car];
     
     //the third cell is Car
-    HATruck *truck = [[HATruck alloc] initWithFreeWight:98.9 fullWight:78.9 length:100 width:190 color:[UIColor redColor] manufactureCompany:@"Ram" manufacture:[NSDate new] model:@"2010" plateNumber:327 bodySerialNumber:@"TR987C8k" engine:[HAEngine new] gearType:Normal];
+    HATruck *truck = [[HATruck alloc] initWithFreeWight:98.9 fullWight:78.9 length:100 width:190 color:[UIColor redColor] manufactureCompany:@"Ram" manufacture:[NSDate new] model:@"2010" plateNumber:@"HAOK9" bodySerialNumber:@"TR987C8k" engine:[HAEngine new] gearType:Normal];
     [AutoMobile addObject:truck];
      
      

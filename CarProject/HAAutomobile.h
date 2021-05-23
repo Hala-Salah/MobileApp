@@ -17,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (retain ,nonatomic) NSDate *manufacture;
 @property (retain ,nonatomic) HAEngine *engine;
 @property (assign ,nonatomic) HAGearType gearType;
-@property (assign ,nonatomic) NSInteger plateNumber;
+@property (copy ,nonatomic) NSString *plateNumber;
 
-- (instancetype)initWithManufactureCompany:(NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSInteger)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType;
+- (instancetype)initWithManufactureCompany:(NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSString *)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType;
 
 @end
 

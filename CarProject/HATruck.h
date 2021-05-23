@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign ,nonatomic)double fullWight;
 
 
-- (instancetype)initWithFreeWight:(double)freeWight fullWight :(double)fullWight length:(NSInteger)length width:(NSInteger )width color:(UIColor *)color manufactureCompany: (NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSInteger)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType;
+- (instancetype)initWithFreeWight:(double)freeWight fullWight :(double)fullWight length:(NSInteger)length width:(NSInteger )width color:(UIColor *)color manufactureCompany: (NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSString *)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType;
 
 @end
 

@@ -9,7 +9,7 @@
 
 @implementation HAAutomobile
 
-- (instancetype)initWithManufactureCompany:(NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSInteger)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType{
+- (instancetype)initWithManufactureCompany:(NSString *)manufactureCompany manufacture:(NSDate *)manufacture model:(NSString *)model plateNumber:(NSString *)plateNumber bodySerialNumber:(NSString *)bodySerialNumber engine:(HAEngine*) engine gearType:(HAGearType) gearType{
     self = [super init];
     if (self) {
         self.manufacture= manufacture;
@@ -23,7 +23,7 @@
 }
 
 - (instancetype) init{
-    return [self initWithManufactureCompany:@" " manufacture:[NSDate date] model:@" " plateNumber:0 bodySerialNumber:@" " engine:[HAEngine new] gearType:Normal];
+    return [self initWithManufactureCompany:@" " manufacture:[NSDate date] model:@" " plateNumber:@" " bodySerialNumber:@" " engine:[HAEngine new] gearType:Normal];
 }
 
 @end

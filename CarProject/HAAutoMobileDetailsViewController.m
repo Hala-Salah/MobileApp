@@ -54,8 +54,8 @@
     
     //now we wont to print other details 3_body serial number
     _serialLabel.text = [NSString stringWithFormat:@" %@ " , [_currentAutomobile bodySerialNumber]];
-    //now we wont to print other details 1_ Company
-    _companyLabel.text = [NSString stringWithFormat:@" %ld " , (long)[_currentAutomobile plateNumber]];
+    //now we wont to print other details palte
+    _plateNumberLabel.text = [NSString stringWithFormat:@" %@ " , [_currentAutomobile plateNumber] ];
     
     
 }

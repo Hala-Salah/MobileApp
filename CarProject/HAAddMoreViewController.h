@@ -10,6 +10,7 @@
 #import "HATruck.h"
 #import "HAMotorcycle.h"
 #import "HAAutomobile.h"
+#import "HAEngine.h"
 #import "HAAutomoblieTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -21,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 @property (weak, nonatomic) IBOutlet UITextField *modelTextField;
 @property (weak, nonatomic) IBOutlet UITextField *bodyNumberTextField;
+@property (weak, nonatomic) IBOutlet UITextField *plateNumberTextField;
 
 
 @end
