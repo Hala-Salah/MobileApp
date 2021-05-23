@@ -15,6 +15,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HAAutomoblieTableViewController : UITableViewController
+@property id theNewAutomobile;
 
 @end
 

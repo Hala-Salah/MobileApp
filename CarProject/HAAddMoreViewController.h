@@ -10,7 +10,7 @@
 #import "HATruck.h"
 #import "HAMotorcycle.h"
 #import "HAAutomobile.h"
-#import "HAShowAddedItemViewController.h"
+#import "HAAutomoblieTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

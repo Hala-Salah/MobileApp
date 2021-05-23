@@ -19,6 +19,9 @@
     [super viewDidLoad];
     //alloc and init for automobile
     AutoMobile =[NSMutableArray new];
+    if(_theNewAutomobile !=nil){
+        [AutoMobile addObject:_theNewAutomobile];
+    }
     
     //the first cell is Motorcycle
      HAMotorcycle *motorCycle = [[HAMotorcycle alloc] initWithManufactureCompany:@"Harley-Davidson" manufacture:[NSDate new] model:@"2020" plateNumber:9874 bodySerialNumber:@"M89C8" engine:[HAEngine new] gearType:Normal];
