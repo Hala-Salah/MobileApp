@@ -9,11 +9,13 @@
 
 @interface HAAddMoreViewController (){
     id newAutomobile;
+    //This is a variable that we took from the previous page
     NSString *automobileType;
+    //These are the variables that we have stored in the inputs "manu_com ,, model ,, body number string etc
     NSString *companyString;
     NSString *modelString;
     NSString *bodyNumberString;
-    NSMutableArray *mu;
+    NSString *stringValue;
 }
     
 @end
@@ -24,20 +26,42 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    mu=[NSMutableArray new];
-    [mu addObject:_companyTextField];
+    
     
     _automobileTypeLabel.text = [NSString stringWithFormat:@"%@" , _automobileTypeSelected];
-    NSString *companyString = self.companyTextField.text;
-    NSString *modelString = self.modelTextField.text;
-    NSString *bodyNumberString = self.bodyNumberTextField.text;
-
     
+    companyString = [[NSUserDefaults standardUserDefaults] stringForKey:@"string"];
+        [_companyTextField setText:companyString];
+        
+        modelString = [[NSUserDefaults standardUserDefaults] stringForKey:@"string"];
+        [_modelTextField setText:modelString];
+        
+        bodyNumberString = [[NSUserDefaults standardUserDefaults] stringForKey:@"string"];
+        [_bodyNumberTextField setText:bodyNumberString];
+    
+}
 
+
+- (IBAction)cancelButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+-(IBAction)saveAction
+{
+    companyString = [_companyTextField text];
+        [[NSUserDefaults standardUserDefaults] setObject:companyString forKey:@"string"];
+        
+        modelString = [_modelTextField text];
+        [[NSUserDefaults standardUserDefaults] setObject:modelString forKey:@"string"];
+        
+        bodyNumberString = [_bodyNumberTextField text];
+        [[NSUserDefaults standardUserDefaults] setObject:bodyNumberString forKey:@"string"];
+    
     
     if ([_automobileTypeSelected isEqual:@"Car"]){
         
-        newAutomobile = [[HACar alloc]initWithchairnum:909 isfurnitreleather:YES length:99 width:88 color:[UIColor blueColor] manufactureCompany:@"Saleh" manufacture:[NSDate new] model:@"Saleh 99" plateNumber:00 bodySerialNumber:@"Saleh 98" engine:[HAEngine new] gearType:Normal];
+        newAutomobile = [[HACar alloc]initWithchairnum:909 isfurnitreleather:YES length:99 width:88 color:[UIColor blueColor] manufactureCompany:companyString manufacture:[NSDate new] model:modelString plateNumber:00 bodySerialNumber:bodyNumberString engine:[HAEngine new] gearType:Normal];
         automobileType=@"Car";
         
         
@@ -53,14 +77,9 @@
         newAutomobile = [[HAMotorcycle alloc] initWithManufactureCompany:companyString manufacture:[NSDate new] model:modelString plateNumber:00 bodySerialNumber:bodyNumberString engine:[HAEngine new] gearType:Normal];
         automobileType=@"motorcycle";
     }
-    
-    
-    
 }
-- (IBAction)cancelButton:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
 
-}
+
 
 
 #pragma mark - Navigation
@@ -71,11 +90,8 @@
     HAShowAddedItemViewController *theNewAutomobile = [segue destinationViewController];
     // Pass the selected object to the new view controller.
     [theNewAutomobile setCurrentAutomobile:newAutomobile];
-    NSLog(@"%@", [newAutomobile manufactureCompany]);
-    NSLog(@"%@" , companyString);
 }
 
 
-- (IBAction)companyTextField:(UITextField *)sender {
-}
+
 @end

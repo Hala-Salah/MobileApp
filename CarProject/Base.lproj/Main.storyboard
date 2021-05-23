@@ -237,6 +237,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveAction" destination="GRD-83-q1b" eventType="touchUpInside" id="GIL-Dq-4iP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pTA-sk-Hou"/>
